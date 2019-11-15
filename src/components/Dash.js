@@ -1,19 +1,29 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Post from './Post';
 import Add from './Add';
 
 
 
-export default class Dash extends Component {
+class Dash extends Component {
     state = {
-        posts:[]
+        posts: [],
+        toggleAdd: false
     }
-    render(){
-        return(
+    toggle = () => {
+        this.setState((prevState) => {
+            return {
+                toggleAdd: !prevState.toggleAdd
+            }
+        })
+    }
+    render() {
+        return (
             <div>
                 <Post />
-                <Add />
+                {this.state.toggleAdd && <Add />}
             </div>
         )
     }
 }
+
+export default Dash;

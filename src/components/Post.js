@@ -1,18 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-export default class Post extends Component {
-    // constructor(){
-    //     super();
-    //     // state = {
-
-    //     // }
-    // }
-    render() {
-        return(
-            <div>
-
-            </div>
-        )
-    }
-    
+class Post extends Component {
+  state = {
+    title: '',
+    content: '',
+    imgUrl: '',
+    editToggle: false
+  }
+  render() {
+    return (
+      <div>
+        Post.jsx
+      </div>
+    );
+  }
 }
+
+export default Post;
